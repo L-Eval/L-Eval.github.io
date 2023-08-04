@@ -1,4 +1,4 @@
-Model,Tokens,Max-Ctx,coursera,gsm100,quality     ,tpo,Avg,topic_ret.,PE,IDD
+Model,Tokens,Max-Ctx,coursera,gsm100,quality,tpo,Avg,topic_ret.,PE,IDD
 claude1.3-100k,100k,100k,60.17,88.00,73.76,83.64,76.39,70.66,x,—
 turbo-16k-0613,16k,16k,62.50,84.00,61.38,78.43,71.57,69.33,x,—
 bm25-turbo-0613 (Ret.),4k,4k,68.75,23.00,59.40,75.09,56.56,39.33,x,—

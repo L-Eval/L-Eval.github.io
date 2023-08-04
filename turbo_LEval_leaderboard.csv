@@ -1,0 +1,12 @@
+Model,Tokens,Max-Ctx,[gpt3.5] n_wins,[gpt3.5] n_draws,[gpt3.5] win rate,Length,PE,IDD
+Claude-100k,100k,100k,189,34,58.68,,x,—
+GPT4-32k,32k,32k,171,50,56.32,,x,—
+ada-turbo-0613 (Ret.),4k,4k,125,78,45.36,,x,—
+bm25-turbo-0613 (Ret.),4k,4k,123,77,45.30,,x,—
+llama2-13b-chat,4k,4k,143,49,47.85,,x,—
+llama2-7b-chat,4k,4k,127,44,42.45,,x,—
+longchat-13b-16k,16k,16k,128,24,40.11,,x,x
+longchat-7b-16k,16k,16k,108,42,37.94,,x,x
+vicuna1.3-7b,8k,8k,97,42,34.91,,x,x
+xgen-7b-8k,2k,2k,89,72,36.02,,x,x
+chatglm2-6b-8k,8k,8k,86,54,32.84,,-,-

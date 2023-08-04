@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
@@ -10,6 +10,7 @@
 
     <title>L-Eval Leaderboard</title>
     <style>
+
         /* 设置表格边框 */
         .table {
             margin-top: -5px;
@@ -59,23 +60,76 @@
             color: white;
         }
         #branding {
+            font-family: "Open Sans", sans-serif;
             cursor: pointer;
             text-align: center;
             margin-bottom: 20px;
         }
+        .switch-toggle {
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        .switch-toggle input + label {
+            padding: 2px;
+            padding-left: 7px;
+            padding-right: 7px;
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid transparent;
+            font-size: 16px;
+        }
+
+        .switch-toggle input:checked + label {
+            border-color: transparent;
+            color: #5232a8;
+        }
+
+        .switch-toggle input:not(:checked) + label {
+            color: #c6bce0;
+            box-shadow: none !important;
+            user-select: none;
+        }
+
+        .toggle-line {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            font-size: 17px;
+        }
+
+        .toggle-line .switch-toggle {
+            margin: 0 10px;
+        }
     </style>
-    <script src="main.js"></script> <!-- 引入我们的JavaScript文件 -->
 </head>
 <body>
     <div id="branding">
-
         <a href="https://github.com/OpenLMLab/LEval">
             <img src="logo.png"
                  alt="Logo" style="height: 10em; vertical-align: middle;"></a>
         <br>
-    <small id="caution" style="color: #8C1515;>
-    <span style="color: #8C1515;"><b>Caution</b>:</span> GPT4/Claude may favor models longer outputs and/or were fine-tuned on GPT4/Claude outputs.
-    </small>
+
+    <div class="switch-toggle switch-evaluator" style="margin-right: 4em">
+        <b>Evaluator: &nbsp;</b>
+        <input id="ExactMatch" name="evaluator" type="radio"  checked="checked"/>
+        <label for="ExactMatch" onclick="">Exact Match</label>
+        <input id="LLMJudge" name="evaluator" type="radio"/>
+        <label for="LLMJudge" onclick="">GPT-4 Evaluator</label>
+        <input id="GPT3.5Judge" name="evaluator" type="radio"/>
+        <label for="GPT3.5Judge" onclick="">GPT-3.5 Evaluator</label>
+        <input id="F1" name="evaluator" type="radio"/>
+        <label for="F1" onclick="">F1</label>
+        <input id="ROUGE" name="evaluator" type="radio"/>
+        <label for="ROUGE" onclick="">ROUGE</label>
+
+    </div>
+            <br>
+        <small id="caution" style="color: #8C1515;>
+        <span style="color: #8C1515;"></span>
+        </small>
+
     </div>
 
     <!-- 其他代码不变，仅显示表格部分 -->
@@ -92,4 +146,5 @@
         </tbody>
     </table>
 </body>
+<script src="main.js"></script> <!-- 引入我们的JavaScript文件 -->
 </html>

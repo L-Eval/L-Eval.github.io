@@ -1,4 +1,4 @@
-Model,Tokens,Max-Ctx,gov_report_summ,news_summ,patent_summ,tv_show_summ,paper_assistant,review_summ,meeting_summ,ROUGE avg,PE,IDD
+Model,Tokens,Max-Ctx,gov_report,news,patent,tv_show,paper_assistant,review,meeting,ROUGE avg,PE,IDD
 turbo-16k-0613,16k,16k,23.6,16.1,29.3,16.9,18.6,18.6,19.3,20.3,x,—
 ada-turbo-0613 (Ret.),4k,4k,20.8,15.4,27.6,15.2,17.3,18.9,20.8,19.4,x,—
 bm25-turbo-0613 (Ret.),4k,4k,21.5,16.8,27.1,15.4,21.2,18.1,20.6,20.1,x,—
